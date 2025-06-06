@@ -61,7 +61,7 @@ export default function DynamicPricingForm() {
               <Sparkles className="w-6 h-6 text-primary" />
               Price Suggestion Form
             </CardTitle>
-            <CardDescription>Enter product details to get a dynamic price recommendation.</CardDescription>
+            <CardDescription>Enter product details to get a dynamic price recommendation in BDT.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <FormField
@@ -106,9 +106,9 @@ export default function DynamicPricingForm() {
                 name="currentPrice"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Current Price ($)</FormLabel>
+                    <FormLabel>Current Price (BDT)</FormLabel>
                     <FormControl>
-                      <Input type="number" placeholder="e.g., 5.99" {...field} step="0.01" />
+                      <Input type="number" placeholder="e.g., 250" {...field} step="1" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -189,10 +189,10 @@ export default function DynamicPricingForm() {
         <div className="p-4 pt-0">
           <Alert variant="default" className="bg-primary/10 border-primary/30">
             <TrendingUp className="h-5 w-5 text-primary" />
-            <AlertTitle className="font-headline text-xl text-primary">Price Suggestion</AlertTitle>
+            <AlertTitle className="font-headline text-xl text-primary">Price Suggestion (BDT)</AlertTitle>
             <AlertDescription className="mt-2 space-y-2 text-foreground/90">
               <p className="text-2xl font-bold">
-                Suggested Price: ${result.suggestedPrice.toFixed(2)}
+                Suggested Price: ৳{result.suggestedPrice.toFixed(2)}
               </p>
               <p><span className="font-semibold">Reasoning:</span> {result.reasoning}</p>
             </AlertDescription>

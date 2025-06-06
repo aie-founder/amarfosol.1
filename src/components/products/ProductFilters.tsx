@@ -19,13 +19,15 @@ const ratings = [
   { value: '1', label: '1 Star & Up' },
 ];
 
+const MAX_PRICE_BDT = 5000; // Maximum price for the filter range in BDT
+
 export default function ProductFilters() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || 'All');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 100]); // Default price range
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, MAX_PRICE_BDT]); 
   const [location, setLocation] = useState(searchParams.get('location') || '');
   const [selectedRating, setSelectedRating] = useState(searchParams.get('rating') || '0');
 
@@ -36,6 +38,7 @@ export default function ProductFilters() {
     } else {
       params.delete('category');
     }
+    // Price filtering is not currently active in products page, but UI is updated
     // params.set('minPrice', priceRange[0].toString());
     // params.set('maxPrice', priceRange[1].toString());
     if (location) {
@@ -48,8 +51,6 @@ export default function ProductFilters() {
     } else {
       params.delete('rating');
     }
-    // Debounce or apply on button click to avoid too many re-renders
-    // For now, apply immediately
     router.replace(`${pathname}?${params.toString()}`, { scroll: false });
 
   }, [selectedCategory, priceRange, location, selectedRating, pathname, router, searchParams]);
@@ -57,7 +58,7 @@ export default function ProductFilters() {
 
   const handleResetFilters = () => {
     setSelectedCategory('All');
-    setPriceRange([0, 100]);
+    setPriceRange([0, MAX_PRICE_BDT]);
     setLocation('');
     setSelectedRating('0');
     router.replace(pathname, { scroll: false });
@@ -87,19 +88,18 @@ export default function ProductFilters() {
         </div>
 
         <div>
-          <Label className="text-base font-semibold mb-2 block">Price Range</Label>
+          <Label className="text-base font-semibold mb-2 block">Price Range (BDT)</Label>
           <Slider
-            defaultValue={[0, 100]} // Use this for initial display only
             value={priceRange}
             min={0}
-            max={100} // Max price, can be dynamic
-            step={1}
+            max={MAX_PRICE_BDT} 
+            step={10} // Adjusted step for BDT
             onValueChange={(value) => setPriceRange(value as [number, number])}
             className="my-4"
           />
           <div className="flex justify-between text-sm text-muted-foreground">
-            <span>${priceRange[0]}</span>
-            <span>${priceRange[1]}</span>
+            <span>৳{priceRange[0]}</span>
+            <span>৳{priceRange[1]}</span>
           </div>
         </div>
 

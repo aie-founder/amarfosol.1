@@ -11,9 +11,9 @@ import Link from 'next/link';
 
 // Mock data - in a real app, this would be fetched based on params.id
 const mockProductsData: { [id: string]: Product } = {
-  '1': { id: '1', name: 'Fresh Spinach', category: 'Vegetables', price: 2.50, imageUrl: 'https://placehold.co/600x600.png', dataAiHint: 'spinach leaves', farmerId: 'f1', farmerName: 'Abdul Karim', location: 'Manikganj', rating: 4.5, harvestDate: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(), description: 'Crisp, organic spinach, hand-picked from Abdul Karim\'s farm in Manikganj. Perfect for salads, smoothies, or light cooking. Grown without any harmful pesticides or chemicals, ensuring you get the freshest and healthiest greens.' },
-  '2': { id: '2', name: 'Ripe Mangoes ( सीजनल )', category: 'Fruits', price: 5.00, imageUrl: 'https://placehold.co/600x600.png', dataAiHint: 'mangoes fruit', farmerId: 'f2', farmerName: 'Fatima Begum', location: 'Rajshahi', rating: 5, harvestDate: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(), description: 'Sweet and juicy seasonal mangoes from Fatima Begum\'s renowned orchards in Rajshahi. These mangoes are known for their exceptional flavor and aroma. Limited stock, available only during the peak season.' },
-  '3': { id: '3', name: 'Brown Rice', category: 'Grains', price: 3.00, imageUrl: 'https://placehold.co/600x600.png', dataAiHint: 'rice grains', farmerId: 'f1', farmerName: 'Abdul Karim', location: 'Dinajpur', rating: 4, harvestDate: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(), description: 'Nutritious whole grain brown rice from Dinajpur, cultivated by Abdul Karim. This rice is unpolished, retaining all its natural bran and germ, making it rich in fiber and essential nutrients. Ideal for a healthy diet.' },
+  '1': { id: '1', name: 'Fresh Spinach', category: 'Vegetables', price: 50, imageUrl: 'https://placehold.co/600x600.png', dataAiHint: 'spinach leaves', farmerId: 'f1', farmerName: 'Abdul Karim', location: 'Manikganj', rating: 4.5, harvestDate: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(), description: 'Crisp, organic spinach, hand-picked from Abdul Karim\'s farm in Manikganj. Perfect for salads, smoothies, or light cooking. Grown without any harmful pesticides or chemicals, ensuring you get the freshest and healthiest greens.' },
+  '2': { id: '2', name: 'Ripe Mangoes ( సీజనల్ )', category: 'Fruits', price: 250, imageUrl: 'https://placehold.co/600x600.png', dataAiHint: 'mangoes fruit', farmerId: 'f2', farmerName: 'Fatima Begum', location: 'Rajshahi', rating: 5, harvestDate: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(), description: 'Sweet and juicy seasonal mangoes from Fatima Begum\'s renowned orchards in Rajshahi. These mangoes are known for their exceptional flavor and aroma. Limited stock, available only during the peak season.' },
+  '3': { id: '3', name: 'Brown Rice', category: 'Grains', price: 120, imageUrl: 'https://placehold.co/600x600.png', dataAiHint: 'rice grains', farmerId: 'f1', farmerName: 'Abdul Karim', location: 'Dinajpur', rating: 4, harvestDate: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(), description: 'Nutritious whole grain brown rice from Dinajpur, cultivated by Abdul Karim. This rice is unpolished, retaining all its natural bran and germ, making it rich in fiber and essential nutrients. Ideal for a healthy diet.' },
 };
 
 // Augment Product type
@@ -74,7 +74,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             </div>
 
             <div className="text-4xl font-bold text-primary mb-6 flex items-center">
-              <Tag className="w-7 h-7 mr-2 text-primary/80" /> ${product.price.toFixed(2)}
+              <Tag className="w-7 h-7 mr-2 text-primary/80" /> ৳{product.price.toFixed(2)}
             </div>
 
             <div className="mb-6">
@@ -133,4 +133,3 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
     </div>
   );
 }
-

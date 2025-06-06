@@ -58,7 +58,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </CardDescription>
         <div className="flex items-center justify-between mb-3">
           <p className="text-xl font-semibold text-primary flex items-center">
-            <Tag className="w-4 h-4 mr-1.5 text-primary/80" /> ${product.price.toFixed(2)}
+            <Tag className="w-4 h-4 mr-1.5 text-primary/80" /> ৳{product.price.toFixed(2)}
           </p>
           <div className="flex items-center">
             <Star className="w-4 h-4 text-accent fill-accent mr-1" />
