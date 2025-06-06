@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
@@ -63,7 +64,11 @@ export default function ChatInterface({ partner }: ChatInterfaceProps) {
     <Card className="w-full max-w-2xl mx-auto shadow-xl flex flex-col" style={{ height: 'calc(100vh - 200px)', minHeight: '400px' }}>
       <CardHeader className="flex flex-row items-center space-x-4 p-4 border-b">
         <Avatar>
-          <AvatarImage src={partner.avatarUrl || `https://placehold.co/40x40.png?text=${partner.name.substring(0,1)}`} alt={partner.name} />
+          <AvatarImage 
+            src={partner.avatarUrl || `https://placehold.co/40x40.png?text=${partner.name.substring(0,1)}`} 
+            alt={partner.name} 
+            data-ai-hint="profile avatar"
+          />
           <AvatarFallback>{partner.name.substring(0, 2)}</AvatarFallback>
         </Avatar>
         <CardTitle className="font-headline text-lg">{partner.name}</CardTitle>
@@ -80,7 +85,10 @@ export default function ChatInterface({ partner }: ChatInterfaceProps) {
             >
               {msg.sender === 'farmer' && (
                 <Avatar className="w-8 h-8">
-                  <AvatarImage src={partner.avatarUrl || `https://placehold.co/32x32.png?text=${partner.name.substring(0,1)}`} />
+                  <AvatarImage 
+                    src={partner.avatarUrl || `https://placehold.co/32x32.png?text=${partner.name.substring(0,1)}`} 
+                    data-ai-hint="profile avatar"
+                  />
                   <AvatarFallback>{partner.name.substring(0,1)}</AvatarFallback>
                 </Avatar>
               )}
@@ -98,7 +106,10 @@ export default function ChatInterface({ partner }: ChatInterfaceProps) {
               </div>
                {msg.sender === 'user' && (
                 <Avatar className="w-8 h-8">
-                  <AvatarImage src="https://placehold.co/32x32.png?text=U" /> {/* Placeholder for current user */}
+                  <AvatarImage 
+                    src="https://placehold.co/32x32.png?text=U" 
+                    data-ai-hint="profile avatar" 
+                  /> {/* Placeholder for current user */}
                   <AvatarFallback>U</AvatarFallback>
                 </Avatar>
               )}
