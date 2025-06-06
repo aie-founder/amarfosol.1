@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
-import { Menu, Leaf } from 'lucide-react';
+import { Menu, Leaf, Languages } from 'lucide-react';
 
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
   { href: '/farmers', label: 'Farmers' },
   { href: '/tools/dynamic-pricing', label: 'Pricing Tool' },
+  { href: '/tools/translator', label: 'Translator' },
   { href: '/chat', label: 'Chat' },
 ];
 
@@ -20,10 +21,11 @@ export default function Header() {
           <span className="text-2xl font-headline font-bold">Amarfosol.com</span>
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-2">
+        <nav className="hidden md:flex items-center space-x-1">
           {navItems.map((item) => (
             <Button key={item.href} variant="ghost" asChild>
-              <Link href={item.href} className="font-semibold text-foreground/80 hover:text-primary">
+              <Link href={item.href} className="font-semibold text-foreground/80 hover:text-primary px-3 py-2 text-sm">
+                {item.label === 'Translator' && <Languages className="w-4 h-4 mr-1.5 md:hidden lg:inline-block" />}
                 {item.label}
               </Link>
             </Button>
@@ -43,7 +45,8 @@ export default function Header() {
               <nav className="flex flex-col space-y-4 mt-8">
                 {navItems.map((item) => (
                   <Button key={item.href} variant="ghost" asChild className="justify-start">
-                    <Link href={item.href} className="text-lg font-semibold text-foreground/80 hover:text-primary">
+                    <Link href={item.href} className="text-lg font-semibold text-foreground/80 hover:text-primary flex items-center gap-2">
+                      {item.label === 'Translator' && <Languages className="w-5 h-5" />}
                       {item.label}
                     </Link>
                   </Button>
