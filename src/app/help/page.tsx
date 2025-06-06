@@ -85,7 +85,7 @@ export default function HelpPage() {
           <CardContent className="text-center">
             <p className="text-muted-foreground mb-4">Send us an email for detailed queries.</p>
             <Button variant="outline" className="w-full" asChild>
-                <Link href="mailto:support@agriconnect.com">Email Us</Link>
+                <Link href="mailto:support@amarfosol.com">Email Us</Link>
             </Button>
           </CardContent>
         </Card>

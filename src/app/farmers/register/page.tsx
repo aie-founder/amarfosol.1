@@ -12,7 +12,7 @@ export default function FarmerRegisterPage() {
     <div>
       <PageHeader
         title="Farmer Registration"
-        description="Please fill out the form below to start selling on AgriConnect."
+        description="Please fill out the form below to start selling on Amarfosol.com."
         icon={UserPlus}
       />
       <Card className="max-w-2xl mx-auto shadow-xl">

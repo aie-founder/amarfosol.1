@@ -9,13 +9,13 @@ export default function FarmerJoinPage() {
     <div>
       <PageHeader
         title="Join as a Farmer"
-        description="Become a part of the AgriConnect community and sell your produce directly to consumers."
+        description="Become a part of the Amarfosol.com community and sell your produce directly to consumers."
         icon={Users}
       />
       <div className="max-w-3xl mx-auto">
         <Card className="shadow-xl">
           <CardHeader>
-            <CardTitle className="font-headline text-2xl">Why Sell with AgriConnect?</CardTitle>
+            <CardTitle className="font-headline text-2xl">Why Sell with Amarfosol.com?</CardTitle>
             <CardDescription>
               Reach a wider audience, get fair prices, and manage your sales efficiently.
             </CardDescription>

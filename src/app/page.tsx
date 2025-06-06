@@ -35,7 +35,7 @@ export default function HomePage() {
        <section id="cta" className="text-center py-12 bg-primary/10 rounded-lg">
         <h2 className="text-3xl font-headline font-bold mb-4 text-primary">Ready to Get Started?</h2>
         <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-          Join AgriConnect today and be part of a sustainable agricultural future. Whether you're a farmer, consumer, or volunteer, there's a place for you.
+          Join Amarfosol.com today and be part of a sustainable agricultural future. Whether you're a farmer, consumer, or volunteer, there's a place for you.
         </p>
         <div className="space-x-4">
           <Button size="lg" asChild>

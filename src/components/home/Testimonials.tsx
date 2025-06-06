@@ -6,7 +6,7 @@ import type { Testimonial } from '@/types';
 const testimonials: Testimonial[] = [
   {
     id: '1',
-    quote: "AgriConnect has transformed how I sell my produce. Direct access to consumers means better prices and less waste. The platform is user-friendly and the support is excellent!",
+    quote: "Amarfosol.com has transformed how I sell my produce. Direct access to consumers means better prices and less waste. The platform is user-friendly and the support is excellent!",
     authorName: 'Amina Khatun',
     authorRole: 'Farmer, Manikganj',
     authorImageUrl: 'https://placehold.co/100x100.png',
@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: '3',
-    quote: "Volunteering through AgriConnect was a rewarding experience. I learned so much about farming and contributed to a meaningful cause. Highly recommend it!",
+    quote: "Volunteering through Amarfosol.com was a rewarding experience. I learned so much about farming and contributed to a meaningful cause. Highly recommend it!",
     authorName: 'Sonia Akter',
     authorRole: 'Volunteer, Gazipur',
     authorImageUrl: 'https://placehold.co/100x100.png',
@@ -43,7 +43,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-headline font-bold text-foreground">Voices of Our Community</h2>
-          <p className="text-muted-foreground mt-2">See what farmers, consumers, and volunteers are saying about AgriConnect.</p>
+          <p className="text-muted-foreground mt-2">See what farmers, consumers, and volunteers are saying about Amarfosol.com.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (

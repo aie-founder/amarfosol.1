@@ -5,8 +5,8 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'AgriConnect',
-  description: 'Connecting Farmers, Consumers, and Volunteers.',
+  title: 'Amarfosol.com',
+  description: 'Amarfosol.com: Connecting Farmers, Consumers, and Volunteers.',
 };
 
 export default function RootLayout({

@@ -9,7 +9,7 @@ export default function HeroSection() {
         <Image
           src="https://placehold.co/1200x600.png"
           alt="Lush green farm"
-          data-ai-hint="farm field"
+          data-ai-hint="bangladesh farm"
           layout="fill"
           objectFit="cover"
           className="opacity-20"
@@ -20,7 +20,7 @@ export default function HeroSection() {
           Fresh. Local. Connected.
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-          AgriConnect bridges the gap between farmers and consumers, fostering a community built on fresh produce, fair prices, and shared growth.
+          Amarfosol.com bridges the gap between farmers and consumers, fostering a community built on fresh produce, fair prices, and shared growth.
         </p>
         <div className="space-x-0 md:space-x-4 space-y-4 md:space-y-0">
           <Button size="lg" asChild className="w-full md:w-auto">

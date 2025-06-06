@@ -17,7 +17,7 @@ export default function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
           <Leaf className="w-8 h-8" />
-          <span className="text-2xl font-headline font-bold">AgriConnect</span>
+          <span className="text-2xl font-headline font-bold">Amarfosol.com</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-2">
