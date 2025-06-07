@@ -1,0 +1,33 @@
+{
+    "import": { initializeApp } from "firebase/app";
+
+    "const": "firebaseConfig" = 
+    {
+      apiKey: "AIzaSyCXDeGz7G3DLHtDI-H8uqpdMbr40PWOa9Y",
+      authDomain: "agriconnect-x9ngd.firebaseapp.com",
+      projectId: "agriconnect-x9ngd",
+      storageBucket: "agriconnect-x9ngd.firebasestorage.app",
+      messagingSenderId: "884633871913",
+      appId: "1:884633871913:web:4e7febff1950f319889e38"
+    };
+    
+    const app = initializeApp(firebaseConfig);
+}
+
+
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
